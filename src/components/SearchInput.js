@@ -9,7 +9,6 @@ function SearchInput(props) {
     axios
       .get("https://api.github.com/users")
       .then((res) => {
-        console.log(res.data);
         usercontext.usedispatch({ type: "setAllUsers", value: res.data });
         usercontext.usedispatch({ type: "setUsers", value: res.data });
       })
